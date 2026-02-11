@@ -5,7 +5,7 @@ E-commerce desenvolvido com **Next.js + Spring Boot**, focado em performance, se
 ## 🧰 Stack
 - Frontend: Next.js, React, TanStack Query, Tailwind
 - Backend: Spring Boot, Java 17, JWT, PostgreSQL
-- Infra: Docker, Nginx, DigitalOcean
+- Infra: Docker, Nginx, AWS
 
 ## 📁 Estrutura
 /frontend → Aplicação web  
