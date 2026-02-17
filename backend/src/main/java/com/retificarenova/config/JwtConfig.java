@@ -1,14 +1,46 @@
 package com.retificarenova.config;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Configuração de JWT da Aplicação
- * TODO: Configurar secret key, tempo de expiração, algoritmo
- */
 @Configuration
+@ConfigurationProperties(prefix = "jwt")
 public class JwtConfig {
 
-    // TODO: Implementar configuração de JWT
+    private String secret;
+    private long expiration;
+    private long refreshExpiration;
+    private String issuer;
 
+    public String getSecret() {
+        return secret;
+    }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
+    }
+
+    public long getExpiration() {
+        return expiration;
+    }
+
+    public void setExpiration(long expiration) {
+        this.expiration = expiration;
+    }
+
+    public long getRefreshExpiration() {
+        return refreshExpiration;
+    }
+
+    public void setRefreshExpiration(long refreshExpiration) {
+        this.refreshExpiration = refreshExpiration;
+    }
+
+    public String getIssuer() {
+        return issuer;
+    }
+
+    public void setIssuer(String issuer) {
+        this.issuer = issuer;
+    }
 }

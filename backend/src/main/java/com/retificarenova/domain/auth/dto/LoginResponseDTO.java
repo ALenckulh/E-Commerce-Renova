@@ -1,11 +1,19 @@
 package com.retificarenova.domain.auth.dto;
 
-/**
- * DTO de Resposta de Login
- * TODO: Campos: token, expiresIn, user
- */
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class LoginResponseDTO {
 
-    // TODO: Implementar campos
-
+    private String accessToken;
+    private String refreshToken;
+    private long expiresIn;
+    private String tokenType;
+    private AuthUserDTO user;
 }

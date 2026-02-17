@@ -1,14 +1,14 @@
 package com.retificarenova.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
-/**
- * Configuração de RestTemplate da Aplicação
- * TODO: Configurar client HTTP para requisições externas (MelhorEnvio)
- */
 @Configuration
 public class RestTemplateConfig {
 
-    // TODO: Implementar configuração de RestTemplate
-
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }

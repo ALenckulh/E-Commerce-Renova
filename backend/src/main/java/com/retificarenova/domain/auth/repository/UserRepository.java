@@ -1,13 +1,16 @@
 package com.retificarenova.domain.auth.repository;
 
+import com.retificarenova.domain.auth.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
 
 /**
  * Repositório de Usuário
- * TODO: Métodos customizados: findByEmail, existsByEmail
  */
-public interface UserRepository extends JpaRepository<Object, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
-    // TODO: Implementar métodos customizados
+    Optional<User> findByEmail(String email);
 
+    boolean existsByEmail(String email);
 }
